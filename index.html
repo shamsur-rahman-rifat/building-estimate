@@ -1,0 +1,62 @@
+
+
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Estimate Calculator</title>
+    <link rel="stylesheet" href="/style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Building Cost Estimator</h1>
+        <div class="calculator">
+            <label for="area">Area (ft²):</label>
+            <input type="number" id="area" placeholder="Enter area in sq feet" required>
+
+            <label for="floors">Number of Floors:</label>
+            <input type="number" id="floors" placeholder="Enter number of floors" required><br>
+            <label for="quality">Construction Quality:</label>
+                <select id="quality">
+                    <option value="Basic">Basic</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Premium">Premium</option>
+                </select><br><br>
+
+            <button onclick="calculateCost()">Calculate</button>
+        </div>
+
+        <div id="result">
+            <h2>Calculation of Cost</h2>
+            <p id="totalCost"></p>
+
+            <h3>Approximate Cost Breakdown</h3>
+            <p id="cementCost"></p>
+            <p id="sandCost"></p>
+            <p id="aggregateCost"></p>
+            <p id="steelCost"></p>
+            <p id="finishersCost"></p>
+            <p id="fittingsCost"></p>
+
+            <h3>Materials Required for Given Construction</h3>
+            <p id="cementRequired"></p>
+            <p id="sandRequired"></p>
+            <p id="aggregateRequired"></p>
+            <p id="steelRequired"></p>
+            <p id="paintRequired"></p>
+            <p id="bricksRequired"></p>
+            <p id="flooringRequired"></p>
+        </div>
+    </div>
+    <br>
+
+    <div class="chart-container" id="materialsChart"></div>
+
+    <div class="chart-container"id="timeChart"></div>
+    
+    <script src="/script.js"></script>
+</body>
+</html>
